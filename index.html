@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>starter code</title>
+<link rel="stylesheet" type="text/css" href="site.css">
+</head>
+
+<body>
+  <!-- forms started with the idea of sending enclosed data back up to a webiste -->
+  <!-- <form name = "mainFrom" action="http:// mywebsite/action_page"></form> -->
+  <!-- <input type="submit" >  shows a submit button-->
+  <!-- which we may well do in other projects later, but for now, 
+    we want to got to a js function -->
+
+    <form name = "mainFrom" ></form>
+
+
+
+
+    <fieldset >
+      <legend>Please Login</legend>
+      <button onclick="NewUser()">New User</button>
+      <button onclick="ExistingUser()">Existing User</button>
+    </fieldset>
+  
+
+    <!--       The <fieldset> tag is used to group related elements in a form. -->
+        <fieldset id="NewUser">
+        <!--       The <legend> tag is puts a title on this subset of the form -->
+        <legend>New User</legend>
+        <!--       for= some id connects the lable to to the input box -->
+       <label for="UserName"> UserName:</label> 
+        <input name="UserName" id="UserName" />
+        
+        <label for="Password">Password:</label>
+        <input name="Password" id="Password" />
+        
+         <label for="city">City:</label>
+        <input name="city" id="city" />
+          <br>
+            <label for="state">State (abbr.):</label>
+        <input name="state" id="state" />
+        
+
+          <!-- here we submit to a local js file -->
+        <button onclick="login()">Login</button>
+          <!-- <input type="submit" > -->
+        
+        </fieldset>
+      
+        
+        <fieldset id="ExistingUser">
+        <legend>Existing User</legend>
+            
+        <label for="UserName">UserName:</label>
+        <input name="UserName" id="UserName2" />
+        
+        <label for="Password">Password:</label>
+        <input name="Password" id="Password2" />
+
+        <button onclick="ExistingUser_login()">Login</button>
+        
+        </fieldset>
+
+
+        
+      </form>
+
+<script src="main.js"></script>
+</body>
+
+</html>
